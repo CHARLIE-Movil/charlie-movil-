@@ -27,14 +27,12 @@ function cerrarModal() {
     document.getElementById('modal').style.display = 'none';
 }
 
-// Cerrar modal si se hace clic fuera
 window.onclick = function(event) {
     if (event.target == document.getElementById('modal')) {
         cerrarModal();
     }
 };
 
-// ====== NAVEGACIÓN ENTRE PRODUCTOS ======
 function siguienteProducto() {
     productoActual = (productoActual + 1) % productos.length;
     mostrarProducto(productoActual);
@@ -50,20 +48,15 @@ function mostrarProducto(index) {
     abrirModal(p.titulo, p.precio, p.detalles, p.imagen);
 }
 
-// ====== CARGAR PRODUCTOS DINÁMICAMENTE ======
-// Aquí puedes agregar todos los equipos con sus datos
+// ====== LISTA DE 60 EQUIPOS ======
 productos = [
-    {
-        titulo: "iPhone 15 Pro Max",
-        precio: "$25,999",
-        detalles: "Pantalla 6.7” Super Retina XDR, 512GB, 8GB RAM, Cámara 48MP",
-        imagen: "img/iphone1.jpg"
-    },
-    {
-        titulo: "Samsung Galaxy S23 Ultra",
-        precio: "$18,999",
-        detalles: "Pantalla 6.8” AMOLED, 256GB, 12GB RAM, Cámara 200MP",
-        imagen: "img/samsung1.jpg"
-    }
-    // Aquí seguirán los demás equipos...
-];
+    // iPhone
+    {titulo: "iPhone 15 Pro Max", precio: "$25,999", detalles: "Pantalla 6.7” Super Retina XDR, 512GB, 8GB RAM, Cámara 48MP", imagen: "img/iphone1.jpg"},
+    {titulo: "iPhone 15 Pro", precio: "$23,999", detalles: "Pantalla 6.1” Super Retina XDR, 256GB, 8GB RAM, Cámara 48MP", imagen: "img/iphone2.jpg"},
+    {titulo: "iPhone 14 Pro Max", precio: "$22,499", detalles: "Pantalla 6.7” Super Retina XDR, 256GB, 6GB RAM, Cámara 48MP", imagen: "img/iphone3.jpg"},
+    {titulo: "iPhone 14 Pro", precio: "$20,999", detalles: "Pantalla 6.1” Super Retina XDR, 128GB, 6GB RAM, Cámara 48MP", imagen: "img/iphone4.jpg"},
+    {titulo: "iPhone 14", precio: "$18,999", detalles: "Pantalla 6.1” Super Retina XDR, 128GB, 6GB RAM, Cámara 12MP", imagen: "img/iphone5.jpg"},
+    {titulo: "iPhone 13 Pro Max", precio: "$17,999", detalles: "Pantalla 6.7” Super Retina XDR, 256GB, 6GB RAM, Cámara 12MP", imagen: "img/iphone6.jpg"},
+    {titulo: "iPhone 13 Pro", precio: "$16,999", detalles: "Pantalla 6.1” Super Retina XDR, 128GB, 6GB RAM, Cámara 12MP", imagen: "img/iphone7.jpg"},
+    {titulo: "iPhone 13", precio: "$15,499", detalles: "Pantalla 6.1” Super Retina XDR, 128GB, 4GB RAM, Cámara 12MP", imagen: "img/iphone8.jpg"},
+    {titulo: "iPhone 12 Pro Max", precio: "$14,999", detalles: "Pantalla 6.

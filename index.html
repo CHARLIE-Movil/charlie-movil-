@@ -3,50 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Teléfonos - Charlie Móvil</title>
+    <title>Catálogo AT&T - Charlie Móvil</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>📱 Catálogo de Teléfonos</h1>
-        <p>Encuentra el equipo perfecto para ti</p>
-    </header>
 
-    <main class="catalogo">
-        <!-- 60 teléfonos -->
-        <!-- Solo muestro 3 como ejemplo, pero puedes duplicar hasta 60 -->
-        <div class="telefono" onclick="abrirModal('Modelo 1', '$500', 'Pantalla 6.5, 128GB, 4GB RAM', 'img/telefono1.jpg')">
-            <img src="img/telefono1.jpg" alt="Teléfono Modelo 1">
-            <h2>Modelo 1</h2>
-            <p>Precio: $500</p>
-        </div>
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/525667616881?text=Hola%20Charlie,%20quiero%20más%20información%20sobre%20los%20equipos%20y%20planes%20AT&T" 
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-        <div class="telefono" onclick="abrirModal('Modelo 2', '$650', 'Pantalla 6.7, 256GB, 6GB RAM', 'img/telefono2.jpg')">
-            <img src="img/telefono2.jpg" alt="Teléfono Modelo 2">
-            <h2>Modelo 2</h2>
-            <p>Precio: $650</p>
+    <!-- Menú lateral -->
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo-att.png" alt="Logo AT&T" class="logo-sidebar">
+            <h2>Charlie Móvil</h2>
+            <span id="close-btn">&times;</span>
         </div>
-
-        <div class="telefono" onclick="abrirModal('Modelo 3', '$700', 'Pantalla 6.8, 512GB, 8GB RAM', 'img/telefono3.jpg')">
-            <img src="img/telefono3.jpg" alt="Teléfono Modelo 3">
-            <h2>Modelo 3</h2>
-            <p>Precio: $700</p>
-        </div>
-        <!-- Aquí seguirías hasta el teléfono 60 -->
-    </main>
-
-    <!-- Modal -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="cerrar" onclick="cerrarModal()">&times;</span>
-            <img id="modal-img" src="" alt="">
-            <h2 id="modal-titulo"></h2>
-            <p id="modal-precio"></p>
-            <p id="modal-detalles"></p>
-            <a id="whatsapp-btn" href="#" target="_blank" class="btn-whatsapp">💬 Consultar por WhatsApp</a>
-        </div>
+        <ul>
+            <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="#iphone"><i class="fab fa-apple"></i> iPhone</a></li>
+            <li><a href="#samsung"><i class="fas fa-mobile-alt"></i> Samsung</a></li>
+            <li><a href="#oppo"><i class="fas fa-bolt"></i> OPPO</a></li>
+            <li><a href="#honor"><i class="fas fa-star"></i> HONOR</a></li>
+            <li><a href="#reno"><i class="fas fa-gem"></i> RENO</a></li>
+            <li><a href="#motorola"><i class="fas fa-motorcycle"></i> Motorola</a></li>
+        </ul>
     </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <!-- Botón menú hamburguesa -->
+    <div id="menu-btn" class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Sección Inicio -->
+    <section id="inicio" class="section inicio">
+        <img src="img/logo-att.png" alt="Logo AT&T" class="logo-att">
+        <h1>Bienvenido a Charlie Móvil</h1>
+        <p>Ejecutivo Carlos Alberto Monjaraz Hernández (Charlie)</p>
+        <p>Correo: <a href="mailto:charleshernamon@gmail.com">charleshernamon@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/525667616881" target="_blank">5667616881</a></p>
+        <div class="promociones">
+            <div class="promo">
+                <img src="img/iphone1.jpg" alt="iPhone Promo">
+                <h3>iPhone 15 Pro Max - AT&T Premium</h3>
+                <p>Desde $999/mes</p>
+            </div>
+            <div class="promo">
+                <img src="img/iphone2.jpg" alt="iPhone Promo">
+                <h3>iPhone 14 Pro - AT&T Azul</h3>
+                <p>Desde $799/mes</p>
+            </div>
+            <div class="promo">
+                <img src="img/iphone3.jpg" alt="iPhone Promo">
+                <h3>iPhone 13 - AT&T Premium</h3>
+                <p>Desde $699/mes</p>
+            </div>
+        </div>
+        <div class="gif-bienvenida">
+            <img src="img/ejecutivo.gif" alt="Ejecutivo saludando">
+        </div>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo iPhone - Charlie Móvil</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+h1 { text-align: center; padding: 20px; color: #333; }
+.catalogo { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; padding: 20px; }
+.producto { background: white; border-radius: 10px; padding: 10px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1); cursor: pointer; transition: transform 0.2s; }
+.producto:hover { transform: scale(1.05); }
+.producto img { max-width: 100%; border-radius: 8px; }
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); }
+.modal-content { background: white; margin: 10% auto; padding: 20px; border-radius: 10px; width: 90%; max-width: 500px; text-align: center; }
+.modal-content img { max-width: 100%; border-radius: 8px; }
+.close { color: red; font-size: 28px; font-weight: bold; cursor: pointer; float: right; }
+</style>
+</head>
+<body>
+
+<h1>📱 Catálogo iPhone - Charlie Móvil</h1>
+
+<div class="catalogo" id="catalogo"></div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal()">&times;</span>
+    <img id="modal-img" src="">
+    <h2 id="modal-nombre"></h2>
+    <p id="modal-precio"></p>
+    <p id="modal-plan"></p>
+    <ul id="modal-caracteristicas" style="text-align:left;"></ul>
+    <a id="modal-whatsapp" href="#" target="_blank" style="display:inline-block; margin-top:10px; padding:10px 15px; background:#25D366; color:white; border-radius:5px; text-decoration:none;">💬 Contactar por WhatsApp</a>
+  </div>
+</div>
+
+<script>
+const productos = [
+  {
+    nombre: "iPhone 15 Pro Max 256GB",
+    precio: "$38,999 MXN",
+    plan: "AT&T Premium y AT&T Azul",
+    imagen: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-max-finish-select-202309-6-1inch-blue-titanium?wid=512&hei=512&fmt=jpeg&qlt=90&.v=1692923777897",
+    caracteristicas: ["Pantalla 6.7'' Super Retina XDR", "Chip A17 Pro", "Cámara triple 48MP", "Batería hasta 29h video", "iOS 17"]
+  },
+  {
+    nombre: "iPhone 15 Pro 128GB",
+    precio: "$33,999 MXN",
+    plan: "AT&T Premium y AT&T Azul",
+    imagen: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-blue-titanium?wid=512&hei=512&fmt=jpeg&qlt=90&.v=1692923777897",
+    caracteristicas: ["Pantalla 6.1'' Super Retina XDR", "Chip A17 Pro", "Cámara triple 48MP", "Batería hasta 23h video", "iOS 17"]
+  },

@@ -7,7 +7,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body> 
+    <!-- MODAL DE PRODUCTO -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img id="modal-img" src="" alt="Imagen del producto">
+        <h2 id="modal-titulo"></h2>
+        <p id="modal-precio"></p>
+        <p id="modal-detalles"></p>
+        <div class="modal-nav">
+            <button onclick="anteriorProducto()"><i class="fas fa-arrow-left"></i> Anterior</button>
+            <button onclick="siguienteProducto()">Siguiente <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+</div>
+
 
     <!-- Botón flotante WhatsApp -->
     <a href="https://wa.me/525667616881?text=Hola%20Charlie,%20quiero%20más%20información%20sobre%20los%20equipos%20y%20planes%20AT&T" 
@@ -65,3 +80,4 @@
         <div class="gif-bienvenida">
             <img src="img/ejecutivo.gif" alt="Ejecutivo saludando">
         </div>
+

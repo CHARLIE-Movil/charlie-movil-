@@ -13,22 +13,40 @@
     </header>
 
     <main class="catalogo">
-        <!-- Ejemplo de un teléfono -->
-        <div class="telefono">
-            <img src="https://via.placeholder.com/200" alt="Teléfono Modelo 1">
+        <!-- 60 teléfonos -->
+        <!-- Solo muestro 3 como ejemplo, pero puedes duplicar hasta 60 -->
+        <div class="telefono" onclick="abrirModal('Modelo 1', '$500', 'Pantalla 6.5, 128GB, 4GB RAM', 'img/telefono1.jpg')">
+            <img src="img/telefono1.jpg" alt="Teléfono Modelo 1">
             <h2>Modelo 1</h2>
             <p>Precio: $500</p>
-            <p>Pantalla 6.5", 128GB, 4GB RAM</p>
         </div>
 
-        <div class="telefono">
-            <img src="https://via.placeholder.com/200" alt="Teléfono Modelo 2">
+        <div class="telefono" onclick="abrirModal('Modelo 2', '$650', 'Pantalla 6.7, 256GB, 6GB RAM', 'img/telefono2.jpg')">
+            <img src="img/telefono2.jpg" alt="Teléfono Modelo 2">
             <h2>Modelo 2</h2>
             <p>Precio: $650</p>
-            <p>Pantalla 6.7", 256GB, 6GB RAM</p>
         </div>
 
-        <!-- Aquí seguirás agregando hasta el teléfono 60 -->
+        <div class="telefono" onclick="abrirModal('Modelo 3', '$700', 'Pantalla 6.8, 512GB, 8GB RAM', 'img/telefono3.jpg')">
+            <img src="img/telefono3.jpg" alt="Teléfono Modelo 3">
+            <h2>Modelo 3</h2>
+            <p>Precio: $700</p>
+        </div>
+        <!-- Aquí seguirías hasta el teléfono 60 -->
     </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <img id="modal-img" src="" alt="">
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-precio"></p>
+            <p id="modal-detalles"></p>
+            <a id="whatsapp-btn" href="#" target="_blank" class="btn-whatsapp">💬 Consultar por WhatsApp</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

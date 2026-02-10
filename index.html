@@ -55,8 +55,28 @@
 
     <!-- Sección Inicio -->
     <section id="inicio" class="section inicio">
-        <img src="img/logo-att.png" alt="Logo AT&T" class="logo-att">
+        <img src="img/lo
+go-att.png" alt="Logo AT&T" class="logo-att">
         <h1>Bienvenido a Charlie Móvil</h1>
+        <!-- 🚀 INICIO CATÁLOGO -->
+<section id="equipos" class="catalogo">
+    <h2>Catálogo de Equipos</h2>
+    <div class="grid-productos">
+        <script>
+            productos.forEach((p, index) => {
+                document.write(`
+                    <div class="tarjeta" onclick="mostrarProducto(${index})">
+                        <img src="${p.imagen}" alt="${p.titulo}">
+                        <h3>${p.titulo}</h3>
+                        <p class="precio">${p.precio}</p>
+                    </div>
+                `);
+            });
+        </script>
+    </div>
+</section>
+<!-- 🚀 FIN CATÁLOGO -->
+
         <p>Ejecutivo Carlos Alberto Monjaraz Hernández (Charlie)</p>
         <p>Correo: <a href="mailto:charleshernamon@gmail.com">charleshernamon@gmail.com</a></p>
         <p>WhatsApp: <a href="https://wa.me/525667616881" target="_blank">5667616881</a></p>
@@ -80,4 +100,5 @@
         <div class="gif-bienvenida">
             <img src="img/ejecutivo.gif" alt="Ejecutivo saludando">
         </div>
+
 
